@@ -1,5 +1,4 @@
 <?php 
-    global $conn;
     class DatabaseClass {
         private $mysqlData;
         private $conn;
@@ -20,7 +19,10 @@
                 ($this->conn)->error;
             }
         }
+        public function getConn()
+        {
+                return $this->conn;
+        }
     }
-
 ?>
 
